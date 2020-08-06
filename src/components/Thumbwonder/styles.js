@@ -28,7 +28,8 @@ export const WrapperThumb = styled.figure`
 
   &:hover {
     --move: calc(var(--space) * -1);
-    transform: translate(var(--move), var(--move));    
+    transform: translate(var(--move), var(--move));   /* posso usar esse --move: calc; ou scale();  */
+    /* transform: scale(1.05); */
 
     & > ${Avatar} {
         transform: translatex(0);
