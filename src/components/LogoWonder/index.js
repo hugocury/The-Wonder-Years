@@ -1,8 +1,8 @@
 import styled from 'styled-components';
-import logo from '../../assets/img/Logo3.png';
+import logo from '../../assets/img/Logo4.png';
 
 const LogoWonder = styled.img.attrs({src: logo , alt: 'Logo The Wonder Years'})`
-  height: 60px;
+  height: 70px;
 `;
 
 export default LogoWonder;

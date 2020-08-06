@@ -1,11 +1,10 @@
 import styled from 'styled-components';
 
 const ButtonWonder = styled.button`
-  padding: 14px 27px;
-  background-color: var(--color-black-dark);
-  color: var(--color-yellow3);
-  border: 1px solid var(--color-dark-turquoise);
-  border-radius: 4px;
+  padding: 12px 24px;
+  background-color: var(--color-black);
+  color: var(--color-blue);
+  border: 1px solid var(--color-blue);  
   font-size: 12rem;
   cursor: pointer;
 `;
