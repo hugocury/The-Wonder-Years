@@ -19,17 +19,17 @@ export const Thumb = styled.img`
 
 export const WrapperThumb = styled.figure`
   --space: 10rem;
+  --move: calc(var(--space) * -1);
+
   position: relative;
   border: 2rem solid var(--color-red);
   width: 420px;
   overflow: hidden;
   cursor: pointer;
   transition: transform 100ms linear;
-
+  
   &:hover {
-    --move: calc(var(--space) * -1);
-    transform: translate(var(--move), var(--move));   /* posso usar esse --move: calc; ou scale();  */
-    /* transform: scale(1.05); */
+    transform: translate(var(--move), var(--move));
 
     & > ${Avatar} {
         transform: translatex(0);
@@ -38,3 +38,7 @@ export const WrapperThumb = styled.figure`
     }
   }
 `;
+
+export const Background = styled.div`
+
+`
