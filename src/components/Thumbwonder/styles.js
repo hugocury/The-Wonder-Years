@@ -1,24 +1,12 @@
 import styled from 'styled-components';
-
-export const Avatar = styled.img`  
-  position: absolute;
-  top: var(--space);
-  left: var(--space);
-  width: 40rem;
-  height: 40rem;
-  border-radius: 50%;
-  border: 1rem solid var(--color-blue);
-  transform: translateX(calc((100% + var(--space)) * -1));
-  opacity: 0;
-  transition: transform 300ms linear, opacity 100ms;
-`;
+import { WrapperAvatar } from '../AvatarWonder/styles';
 
 export const Thumb = styled.img`
   width: 100%;
+  transition: filter 100ms linear;
 `;
 
 export const WrapperThumb = styled.figure`
-
   
   position: relative;
   border: var(--border) solid var(--color-blue);
@@ -26,13 +14,22 @@ export const WrapperThumb = styled.figure`
   overflow: hidden;
   cursor: pointer;
   transition: transform 100ms linear;
+
+  & > ${WrapperAvatar} {
+    position: absolute;
+    top: var(--space);
+    left: var(--space);
+    margin-right: 10rem;
+    transform: translateX(calc((100% + var(--space)) * -1));
+    opacity: 0;
+    transition: transform 200ms linear, opacity 100ms;
+  }
 `;
 
 export const Background = styled.div`
   --space: 10rem;
   --border: 2rem;  
   --move-space: calc(var(--space) * -1);
-
   position: relative;
   background-color: var(--color-blue);
 
@@ -40,12 +37,9 @@ export const Background = styled.div`
   &::after {
       content: '';
       position: absolute;
-
       width: calc(var(--space) * 1.4);
       height: calc(var(--space) * 1.4);
-      background-color: var(--color-blue);
-      
-      
+      background-color: var(--color-blue);   
       transition: transform 100ms linear;
   }
 
@@ -74,8 +68,12 @@ export const Background = styled.div`
 
     & > ${WrapperThumb} {
       transform: translate(var(--move-space), var(--move-space));
+      
+      & > ${Thumb} {
+          filter: brightness(0.7);
+      }
 
-      & > ${Avatar} {
+      & > ${WrapperAvatar} {
           transform: translatex(0);
           opacity: 1;
           transition: transform 100ms 150ms linear, opacity 300ms 150ms linear;

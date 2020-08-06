@@ -1,12 +1,13 @@
 import React from 'react';
-import { WrapperThumb, Thumb, Avatar, Background } from './styles';
+import { WrapperThumb, Thumb, Avatar, Background, Channel } from './styles';
+import AvatarWonder from '../AvatarWonder';
 
 function ThumbWonder({ src, alt, avatar, channelName }) {
   return (
     <Background>
-    <WrapperThumb>
+      <WrapperThumb>
         <Thumb src={src} alt={alt}/>
-        <Avatar src={avatar} alt={channelName} />
+        <AvatarWonder photo={avatar} channelName={channelName} />
       </WrapperThumb>
     </Background>
   );
