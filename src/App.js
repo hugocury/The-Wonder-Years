@@ -37,6 +37,7 @@ function App() {
         <ThumbWonder
           src={thumb}
           alt="Thumb Wonder Years"
+          title="Melhor abertura série de todos os tempos"
           avatar={wonder}
           channelName="The Wonder Years"
         />        
