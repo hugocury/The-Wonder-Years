@@ -18,27 +18,68 @@ export const Thumb = styled.img`
 `;
 
 export const WrapperThumb = styled.figure`
-  --space: 10rem;
-  --move: calc(var(--space) * -1);
 
+  
   position: relative;
-  border: 2rem solid var(--color-red);
+  border: var(--border) solid var(--color-blue);
   width: 420px;
   overflow: hidden;
   cursor: pointer;
   transition: transform 100ms linear;
-  
-  &:hover {
-    transform: translate(var(--move), var(--move));
-
-    & > ${Avatar} {
-        transform: translatex(0);
-        opacity: 1;
-        transition: transform 100ms 150ms linear, opacity 300ms 150ms linear;
-    }
-  }
 `;
 
 export const Background = styled.div`
+  --space: 10rem;
+  --border: 2rem;  
+  --move-space: calc(var(--space) * -1);
 
+  position: relative;
+  background-color: var(--color-blue);
+
+  &::before,
+  &::after {
+      content: '';
+      position: absolute;
+
+      width: calc(var(--space) * 1.4);
+      height: calc(var(--space) * 1.4);
+      background-color: var(--color-blue);
+      
+      
+      transition: transform 100ms linear;
+  }
+
+  &::before {
+    right: 0;
+    top: 0;
+    transform-origin: right top;
+    transform: rotate(45deg) scale(0);
+  }
+
+  &:after {
+    left: 0;
+    bottom: 0;
+    transform-origin: left bottom;
+    z-index: -1;
+    transform: rotate(-45deg) scale(0);
+  }
+
+    &:hover {
+      &::before {
+        transform: rotate(45deg) scale(1);
+      }
+      &::after {
+        transform: rotate(-45deg) scale(1);
+      }
+
+    & > ${WrapperThumb} {
+      transform: translate(var(--move-space), var(--move-space));
+
+      & > ${Avatar} {
+          transform: translatex(0);
+          opacity: 1;
+          transition: transform 100ms 150ms linear, opacity 300ms 150ms linear;
+       }
+    }
+  }
 `
