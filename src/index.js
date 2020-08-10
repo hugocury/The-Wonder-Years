@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import App from './App.jsx';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import './styles/settings/colors.css';
 import './styles/reset.css';
-import Video from './pages/Video/Index';
+import Video from './pages/Video';
 
 ReactDOM.render(
   <React.StrictMode>

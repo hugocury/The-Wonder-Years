@@ -21,7 +21,7 @@ function App() {
         <Wrapper>
         <LogoWonder />
 
-        <ButtonWonder>Novo Vídeo</ButtonWonder>
+        <ButtonWonder as="a" href="/video/new">Novo Vídeo</ButtonWonder>
         </Wrapper>
       </HeaderWonder>
 
