@@ -1,22 +1,20 @@
 import styled from 'styled-components';
 import ButtonWonder from '../ButtonWonder';
-import container from '../../tools/container';
 
 export const HeaderWonder = styled.header`
   background-color: var(--color-black);
   border-bottom: 3px solid var(--color-blue);
-  padding: 12px 25px; 
+  padding: 12rem 30rem; 
 
   @media(max-width: 700px) {    
-    padding: 12px 25px;    
+    padding: 12rem 25rem;    
   }
 `;
 
 export const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  ${container};
+  align-items: center;  
 
   @media(max-width: 800px) {
     justify-content: center;

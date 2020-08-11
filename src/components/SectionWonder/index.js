@@ -1,15 +1,18 @@
 import styled from 'styled-components';
-import container from '../../tools/container';
 import TagWonder from '../TagWonder';
 import DescriptionWonder from '../DescriptionWonder';
 
 const SectionWonder = styled.section`
-  padding-top: 20rem;
-  padding-bottom: 20rem;
-  ${container};
+  padding: 8rem 30rem;
+  padding-bottom: 50rem;
 
   & > ${TagWonder} {
-    margin-bottom: 40rem;
+    margin-bottom: 20rem;
+  }
+
+  & > ${TagWonder}:not(:first-child) {
+    margin-left: 30rem;
+    align-self: flex-start;
   }
 
   & > ${DescriptionWonder} {

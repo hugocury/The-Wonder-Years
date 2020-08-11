@@ -9,6 +9,58 @@ import wonder from './assets/img/wonder.jpg';
 import HeaderOpen from './components/HeaderOpen/index';
 import FooterOpen from './components/FooterOpen';
 import SectionWonder from './components/SectionWonder';
+import CarouselWonder from './components/CarouselWonder/index';
+
+const videos = [
+  {
+    src: thumb,
+    alt: "Thumb Wonder Years",
+    title: "Melhor abertura série de todos os tempos",
+    avatar: wonder,
+    channelName: "The Wonder Years",
+    link: '<iframe width="560" height="315" src="https://www.youtube.com/embed/WVMyWj8DpZk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+  },
+  {
+    src: thumb,
+    alt: "Thumb Wonder Years",
+    title: "Melhor abertura série de todos os tempos",
+    avatar: wonder,
+    channelName: "The Wonder Years",
+    link: '<iframe width="560" height="315" src="https://www.youtube.com/embed/WVMyWj8DpZk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+  },
+  {
+    src: thumb,
+    alt: "Thumb Wonder Years",
+    title: "Melhor abertura série de todos os tempos",
+    avatar: wonder,
+    channelName: "The Wonder Years",
+    link: '<iframe width="560" height="315" src="https://www.youtube.com/embed/WVMyWj8DpZk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+  },
+  {
+    src: thumb,
+    alt: "Thumb Wonder Years",
+    title: "Melhor abertura série de todos os tempos",
+    avatar: wonder,
+    channelName: "The Wonder Years",
+    link: '<iframe width="560" height="315" src="https://www.youtube.com/embed/WVMyWj8DpZk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+  },
+  {
+    src: thumb,
+    alt: "Thumb Wonder Years",
+    title: "Melhor abertura série de todos os tempos",
+    avatar: wonder,
+    channelName: "The Wonder Years",
+    link: '<iframe width="560" height="315" src="https://www.youtube.com/embed/WVMyWj8DpZk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+  },
+  {
+    src: thumb,
+    alt: "Thumb Wonder Years",
+    title: "Melhor abertura série de todos os tempos",
+    avatar: wonder,
+    channelName: "The Wonder Years",
+    link: '<iframe width="560" height="315" src="https://www.youtube.com/embed/WVMyWj8DpZk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+  }
+]
 
 function App() {
   return (
@@ -34,9 +86,11 @@ function App() {
       </BannerWonder>
 
       <SectionWonder>
-        <TagWonder>Season 1</TagWonder>
+        <TagWonder small>Season 1</TagWonder>
 
         <DescriptionWonder>(1988)</DescriptionWonder>
+        
+        <CarouselWonder videos={videos} />
       </SectionWonder>
 
       <FooterOpen />
