@@ -1,11 +1,4 @@
 import React from 'react';
-import { HeaderWonder, Wrapper } from './components/HeaderWonder';
-import LogoWonder from './components/LogoWonder';
-import ButtonWonder from './components/ButtonWonder';
-import FooterWonder from './components/FooterWonder';
-import LinkWonder from './components/LinkWonder';
-// import HighlightWonder from './components/HighlightWonder';
-import LogoReact from './components/LogoReact';
 import { BannerWonder, Text } from './components/BannerWonder';
 import TagWonder from './components/TagWonder';
 import TitleWonder from './components/TilteWonder';
@@ -13,17 +6,14 @@ import DescriptionWonder from './components/DescriptionWonder';
 import ThumbWonder from './components/Thumbwonder';
 import thumb from './assets/img/thumb.png';
 import wonder from './assets/img/wonder.jpg';
+import HeaderOpen from './components/HeaderOpen/index';
+import FooterOpen from './components/FooterOpen';
+import SectionWonder from './components/SectionWonder';
 
 function App() {
   return (
     <>
-      <HeaderWonder>
-        <Wrapper>
-        <LogoWonder />
-
-        <ButtonWonder as="a" href="/video/new">Novo Vídeo</ButtonWonder>
-        </Wrapper>
-      </HeaderWonder>
+      <HeaderOpen />  
 
       <BannerWonder>
         <Text>
@@ -43,16 +33,13 @@ function App() {
         />        
       </BannerWonder>
 
-      <FooterWonder>
-        <LogoWonder />
-        <p>
-          Desenvolvido por
-          {' '}
-          <LinkWonder href= "https://github.com/hugocury">Hugo Cury</LinkWonder>
-          {' '}
-          <a href= "https://www.alura.com.br"><LogoReact/></a>
-        </p>
-      </FooterWonder>
+      <SectionWonder>
+        <TagWonder>Season 1</TagWonder>
+
+        <DescriptionWonder>(1988)</DescriptionWonder>
+      </SectionWonder>
+
+      <FooterOpen />
     </>
   );
 }
