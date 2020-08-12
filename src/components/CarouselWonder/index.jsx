@@ -1,19 +1,23 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { CarouselStyle, Wrapper, Right } from './styles';
+import { CarouselStyle, Wrapper, Left, Right } from './styles';
 import ThumbWonder from '../Thumbwonder';
 
-function CarouselWonder({ videos }) {
-  // let moveRight = false;
-  const [moveRight, setMoveRight] = useState(false);
+function CarouselWonder({ videos }) { 
+  const [move, setMove] = useState(0);
 
   function actionRight() {
-    setMoveRight(true);
+    setMove((oldMove) => oldMove - 1);
+  }
+
+  function actionLeft() {
+    setMove((oldMove) => oldMove + 1);
   }
 
   return (
     <CarouselStyle>
-      <Wrapper moveRight={moveRight}>
+      <Left onClick={actionLeft}/>
+      <Wrapper move={move}>
         {videos.map(({src, alt, title, avatar, channelName, link}) => (
           <ThumbWonder 
           src={src}
