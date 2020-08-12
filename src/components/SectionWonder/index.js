@@ -10,11 +10,6 @@ const SectionWonder = styled.section`
     margin-bottom: 20rem;
   }
 
-  & > ${TagWonder}:not(:first-child) {
-    margin-left: 30rem;
-    align-self: flex-start;
-  }
-
   & > ${DescriptionWonder} {
     display: inline-block;
     margin-left: 15rem;
