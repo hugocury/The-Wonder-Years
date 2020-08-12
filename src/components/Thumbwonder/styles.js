@@ -23,7 +23,7 @@ export const WrapperThumb = styled.figure`
   
   position: relative;
   border: var(--border) solid var(--color-blue);
-  width: 420px;
+  width: 500px;
   overflow: hidden;
   cursor: pointer;
   transition: transform 100ms linear;

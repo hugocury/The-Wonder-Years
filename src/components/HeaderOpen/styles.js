@@ -7,7 +7,7 @@ export const HeaderWonder = styled.header`
   padding: 12rem 30rem; 
 
   @media(max-width: 700px) {    
-    padding: 12rem 25rem;    
+    padding: 12rem 25rem;
   }
 `;
 

@@ -1,7 +1,7 @@
 const container = `
   max-width: 1060px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 25rem;
+  margin-right: 25rem;
 
   @media(max-width: 1060px) {
     padding-left: 16rem;

@@ -3,7 +3,7 @@ import TagWonder from '../TagWonder';
 import DescriptionWonder from '../DescriptionWonder';
 
 const SectionWonder = styled.section`
-  padding: 8rem 30rem;
+  padding: 12rem 25rem;
   padding-bottom: 50rem;
 
   & > ${TagWonder} {

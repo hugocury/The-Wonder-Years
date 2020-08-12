@@ -1,6 +1,20 @@
-import styled from 'styled-components';
+import styled, {css} from 'styled-components';
 import { Background, WrapperThumb } from '../Thumbwonder/styles';
 import arrow from '../../assets/img/arrowRight.svg';
+
+export const Wrapper = styled.div`
+  display: flex;
+  transition: transform 200ms linear;
+
+  & > ${Background} {
+    margin-right: 20rem;    
+  }
+
+  ${({ moveRight }) =>
+    moveRight && css`
+      transform: translateX(calc(var(--thumb-width) * -1));
+    `}
+`;
 
 export const Right = styled.button`
   position: absolute;
@@ -21,16 +35,17 @@ export const Right = styled.button`
   }
 
   &:hover::after {
-    transform: scale(1.2);
+    transform: scale(1.1);
   }
 
   &:active::after {
-    transform: scale(1.2) translateX(4rem);
+    transform: scale(1.1) translateX(4rem);
   }
 `;
 
 export const CarouselStyle = styled.div`
   --space-top-bottom: 20rem;
+  --thumb-width: 300px;
   position: relative;
   display: flex;
   align-items: center;
@@ -40,12 +55,8 @@ export const CarouselStyle = styled.div`
   padding: var(--space-top-bottom) 20rem;
   overflow: hidden;
 
-  & > ${Background} {
-    margin-right: 20rem;    
-  }
-
   & ${WrapperThumb} {
-    width: 300px;
+    width: var(--thumb-width);
   }
 
   &:hover > ${Right} {
