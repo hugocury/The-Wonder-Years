@@ -4,16 +4,21 @@ import arrowRight from '../../assets/img/arrowRight.svg';
 import arrowLeft from '../../assets/img/arrowLeft.svg';
 
 export const Wrapper = styled.div`
+  --space-right: 20rem;
   display: flex;
   transition: transform 200ms linear;
 
   & > ${Background} {
-    margin-right: 20rem;    
+    margin-right: var(--space-right);    
   }
 
   ${({ move }) =>
     css`
-      transform: translateX(calc(var(--thumb-width) * ${move}));
+      transform: translateX(
+        calc(
+          (var(--thumb-width) + var(--space-right)) * ${move}
+        )
+      );
     `}
 `;
 
@@ -75,6 +80,7 @@ export const Left = styled.button`
 
 export const CarouselStyle = styled.div`
   --space-top-bottom: 20rem;
+  --space-right-left: 20rem;
   --thumb-width: 300px;
   position: relative;
   display: flex;
@@ -82,11 +88,12 @@ export const CarouselStyle = styled.div`
   align-self: flex-start;
   box-sizing: border-box;
   width: 100%;
-  padding: var(--space-top-bottom) 20rem;
+  padding: var(--space-top-bottom) var(--space-right-left);
   overflow: hidden;
 
   & ${WrapperThumb} {
     width: var(--thumb-width);
+    box-sizing: border-box;
   }
 
   &:hover > ${Right} {
